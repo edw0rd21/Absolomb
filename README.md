@@ -1,3 +1,4 @@
 # Absolomb
 # Ray Tracer Project  
-## Description A brief description of what your ray tracer does.
+
+## Description A brief description of the ray tracer does(to be added).
