@@ -4,7 +4,6 @@
 #include "interval.h"
 
 //color is just an alias for vec3
-
 using color = vec3;
 
 class Draw

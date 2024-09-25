@@ -19,10 +19,11 @@
 void raytracer()
 {
     hittable_list world;
-     
-    auto ground_material = std::make_shared<metal>(color(0.5, 0.5, 0.5), 0.6);
-    world.add(std::make_shared<sphere>(point3(0, -1000, 0), 1000, ground_material));
 
+    auto ground_material = std::make_shared<lambertian>(color(0.5, 0.5, 0.5));
+    world.add(std::make_shared<sphere>(point3(0, -1000, 0), 1000, ground_material));
+    
+    
     for (int a = -11; a < 11; a++) {
         for (int b = -11; b < 11; b++) {
             auto choose_mat = random_double();
@@ -52,8 +53,8 @@ void raytracer()
             }
         }
     }
-
-    auto material1 = std::make_shared<metal>(color(0, 0.502, 0.502), 0.6);
+    
+    auto material1 = std::make_shared<dielectric>(1.5);
     world.add(std::make_shared<sphere>(point3(0, 1, 0), 1.0, material1));
 
     auto material2 = std::make_shared<lambertian>(color(0.4, 0.2, 0.1));
@@ -61,28 +62,16 @@ void raytracer()
 
     auto material3 = std::make_shared<metal>(color(0.7, 0.6, 0.5), 0.0);
     world.add(std::make_shared<sphere>(point3(4, 1, 0), 1.0, material3));
-    
-    /*
-    auto material_ground = std::make_shared<metal>(color(0.5, 0.5, 0.5), 0.6);
-    auto material_center = std::make_shared<lambertian>(color(0.9, 0.9, 0.9));
-    auto material_left = std::make_shared<metal>(color(1.0, 0.0, 0.0), 0.0);
-    auto material_right = std::make_shared<metal>(color(0.0, 0.0, 1.0), 0.0);
-
-    world.add(std::make_shared<sphere>(point3(0.0, -100.5, -1.0), 100.0, material_ground));
-    world.add(std::make_shared<sphere>(point3(0.0, 0.0, -1.2), 0.5, material_center));
-    world.add(std::make_shared<sphere>(point3(-1.0, 0.0, -1.0), 0.5, material_left));
-    world.add(std::make_shared<sphere>(point3(1.0, 0.0, -1.0), 0.5, material_right));
-    */
 
     camera cam;
 
     cam.aspect_ratio = 16.0 / 9.0;
     cam.image_width = 800;
-    cam.samples_per_pixel = 500;
+    cam.samples_per_pixel = 350;
     cam.max_depth = 100;
 
     cam.vfov = 40;
-    cam.lookfrom = point3(0, 2.5, 10);
+    cam.lookfrom = point3(13, 2, 5);
     cam.lookat = point3(0, 0, -1);
     cam.vup = vec3(0, 1, 0);
 
