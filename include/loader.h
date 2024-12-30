@@ -14,8 +14,6 @@
 #include "interval.h"
 #include "camera.h"
 
-
-
 void raytracer()
 {
     hittable_list world;
@@ -67,8 +65,8 @@ void raytracer()
 
     cam.aspect_ratio = 16.0 / 9.0;
     cam.image_width = 800;
-    cam.samples_per_pixel = 350;
-    cam.max_depth = 100;
+    cam.samples_per_pixel = 50;
+    cam.max_depth = 35;
 
     cam.vfov = 40;
     cam.lookfrom = point3(13, 2, 5);
