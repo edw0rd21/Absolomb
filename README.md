@@ -31,7 +31,9 @@ sh build.sh
 # To run the executable
 sh run.sh
  ```
-    
+
+**NOTE:**  Currently, only **Release** builds are supported. Support for **Debug** builds is a work in progress and will be added soon.
+
 ### TODO:
 - Add support for other OS
 - Add support for additional C++ compilers
