@@ -11,7 +11,7 @@ set(CMAKE_PREFIX_PATH "${CMAKE_SOURCE_DIR}/vendor/SFML/lib/cmake/SFML" ${CMAKE_P
 
 include_directories(include)
 
-find_package(SFML 2.6.1 COMPONENTS graphics window system REQUIRED)
+add_subdirectory(vendor/SFML)
 
 file(GLOB SOURCE_FILES "src/*.cpp")
 
