@@ -25,6 +25,9 @@ This Ray Tracer project was created to explore the fundamentals of **Computer Gr
 git clone https://github.com/edw0rd21/Absolomb.git
 cd Absolomb
 
+#To pull SFML submodule code
+git submodule update --init
+
 # To compile the source
 .\build.bat
 
