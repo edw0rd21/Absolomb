@@ -26,10 +26,10 @@ git clone https://github.com/edw0rd21/Absolomb.git
 cd Absolomb
 
 # To compile the source
-sh build.sh
+.\build.bat
 
 # To run the executable
-sh run.sh
+.\run.bat
  ```
 
 **NOTE:**  Currently, only **Release** builds are supported. Support for **Debug** builds is a work in progress and will be added soon.
