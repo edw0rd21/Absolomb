@@ -17,7 +17,7 @@ This Ray Tracer project was created to explore the fundamentals of **Computer Gr
 - C++ Compiler (preferably have Visual Studio installed and use MSVC, other compilers not tested yet)
 
 ### Dependencies:
-- SFML: 2.6.1 (Prepackaged with repo, no need to download/install separately)
+- SFML: 2.5.1 (Prepackaged with repo, no need to download/install separately)
 
 ### Steps to build:
 
